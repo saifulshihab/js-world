@@ -1,8 +1,4 @@
-# learn-javascript
-
-Learn javascript
-
-## Scope
+# Scope
 
 - ### Global scope
   - Any variables defined in the root or global level can be accessed from any other inner scope, including functions.
