@@ -11,6 +11,20 @@
   // x is accessible to anywhere since it is global scoped
   ```
 
+  ```js
+  var x = 200;
+  console.log(window.x);
+  // 200
+  // x is added as a property to the window object, since declared with `var`
+  ```
+
+  ```js
+  const x = 200;
+  console.log(window.x);
+  // undefined
+  // since x is declared using `const`
+  ```
+
 - ### Function Scope
 
   Any variables declared inside a function can only be accessed within that specific function. - JS throws an Reference error while accessing a variables outside a function.
@@ -25,7 +39,7 @@
   }
   console.log(x);
   // ReferenceError: x is not defined
-  // Since x is function scoped whether it is declared witt var or let/const
+  // Since x is function scoped whether it is declared witt `var` or `let/const`
   ```
 
 - ### Block Scope
@@ -50,7 +64,7 @@
     var x = 2;
   }
   console.log(x);
-  // 1, accessible since x declared using var
+  // 1, accessible since x declared using `var`
   ```
 
   ```js
@@ -60,5 +74,5 @@
     var x = 2;
   }
   console.log(x);
-  // undefined, since x is declared using const
+  // undefined, since x is declared using `const`
   ```
