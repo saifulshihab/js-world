@@ -4,15 +4,36 @@ Event propagation dictates how events travel through the Document Object Model (
 
 Event propagation has three phases
 
-1. Event Bubbling
-2. Event Capturing
-3. Event Delegation
+1. **Capturing Phase (Trickling)**: The event moves downward from the top-level `window` object through ancestors to reach the target element.
 
-4. Capturing Phase (Trickling): The event moves downward from the top-level window object through ancestors to reach the target element.
+2. **Target Phase**: The event arrives explicitly at `event.target`, where listeners registered directly on that element execute.
 
-5. Target Phase: The event arrives explicitly at the event.target, where listeners registered directly on that element execute.
+3. **Bubbling Phase**: The event reverses direction, traveling upward from the target back to the `window`. This is the default behavior for almost all events in JavaScript.
 
-6. Bubbling Phase: The event reverses direction, traveling upward from the target back to the window. This is the default behavior for almost all events in JavaScript.
+By default, `addEventListener` listens during the bubbling phase. Pass `true` (or `{ capture: true }`) as the third argument to listen during the capturing phase instead.
+
+```js
+document.getElementById("outer").addEventListener(
+  "click",
+  () => console.log("outer - capturing"),
+  true // capture: true
+);
+
+document.getElementById("inner").addEventListener("click", () =>
+  console.log("inner - bubbling")
+);
+
+document.getElementById("outer").addEventListener("click", () =>
+  console.log("outer - bubbling")
+);
+
+// Clicking #inner logs:
+// "outer - capturing"  (capturing phase, top-down)
+// "inner - bubbling"   (target phase)
+// "outer - bubbling"   (bubbling phase, bottom-up)
+```
+
+> **Event delegation** (see [event-delegation](../event-delegation)) is a *pattern* built on top of the bubbling phase — it isn't a propagation phase itself.
 
 ## Controlling Event Flow
 
