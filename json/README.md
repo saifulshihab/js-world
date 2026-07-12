@@ -27,7 +27,8 @@ const parsed = JSON.parse(json);
 console.log(parsed.name); // "Ada"
 console.log(typeof parsed); // "object"
 
-JSON.parse("{ invalid }"); // SyntaxError: Expected property name or '}' in JSON at position 2
+JSON.parse("{ invalid }"); // SyntaxError: Expected property name or '}' in JSON at position 2...
+// (exact wording is engine/version-dependent)
 ```
 
 ## What gets lost in translation

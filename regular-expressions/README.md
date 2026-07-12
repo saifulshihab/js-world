@@ -87,9 +87,10 @@ console.log("a1b2c3".split(/\d/)); // ["a", "b", "c", ""]
 
 ```js
 const pattern = /a/g;
-console.log(pattern.test("banana")); // true
-console.log(pattern.test("banana")); // true — lastIndex moved forward
-console.log(pattern.test("banana")); // false — ran out of matches, resets on the 4th call
+console.log(pattern.test("banana")); // true  — matched the "a" at index 1, lastIndex now 2
+console.log(pattern.test("banana")); // true  — matched the "a" at index 3, lastIndex now 4
+console.log(pattern.test("banana")); // true  — matched the "a" at index 5, lastIndex now 6
+console.log(pattern.test("banana")); // false — ran out of matches, lastIndex resets to 0
 // Reusing a global regex across calls can produce surprising results;
 // create a fresh regex (or reset .lastIndex = 0) if this matters.
 ```

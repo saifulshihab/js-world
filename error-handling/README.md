@@ -13,7 +13,8 @@ try {
 } finally {
   console.log("Parsing attempt finished"); // always runs
 }
-// "Failed to parse: Expected property name or '}' in JSON at position 2"
+// "Failed to parse: Expected property name or '}' in JSON at position 2..."
+// (exact wording varies by JS engine/version — Chrome, Node, and Firefox all phrase it slightly differently)
 // "Parsing attempt finished"
 ```
 

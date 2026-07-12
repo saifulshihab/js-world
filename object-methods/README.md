@@ -91,8 +91,9 @@ const rectangle = {
     return this.width * this.height; // computed on access, no method call needed
   },
   set area(value) {
-    // treat area as a way to resize while keeping the aspect ratio
-    const ratio = value / this.area;
+    // treat area as a way to resize while keeping the aspect ratio;
+    // area scales with the SQUARE of the linear ratio, so take the sqrt
+    const ratio = Math.sqrt(value / this.area);
     this.width *= ratio;
     this.height *= ratio;
   },

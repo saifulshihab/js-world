@@ -38,6 +38,8 @@
 
 - [Array Methods](./array-methods)
 - [Strings](./strings)
+- [Numbers & Math](./numbers-math)
+- [Date](./date)
 - [Map, Set, WeakMap & WeakSet](./map-set)
 - [JSON](./json)
 - [Regular Expressions](./regular-expressions)

@@ -113,7 +113,7 @@ const roundToCents = (n) => Math.round(n * 100) / 100;
 
 const finalPrice = pipe(clampToZero, applyDiscount(0.2), roundToCents);
 
-console.log(finalPrice(99.999)); // 79.99, discount and rounding applied in sequence
+console.log(finalPrice(99.99)); // 79.99, discount and rounding applied in sequence
 ```
 
 `compose` reads "mathematically" (rightmost function runs first, like `f(g(h(x)))`), while `pipe` reads like a left-to-right pipeline — most real-world code favors `pipe` for readability.
