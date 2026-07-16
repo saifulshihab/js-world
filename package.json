@@ -1,0 +1,29 @@
+{
+  "name": "js-world",
+  "version": "1.0.0",
+  "description": "JavaScript world",
+  "main": "script.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saifulshihab/js-world.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saifulshihab/js-world/issues"
+  },
+  "homepage": "https://github.com/saifulshihab/js-world#readme",
+  "dependencies": {
+    "astro": "^7.0.9"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.5",
+    "prettier-plugin-astro": "^0.14.1"
+  }
+}
