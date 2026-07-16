@@ -1,5 +1,8 @@
 ---
+import { getCollection } from "astro:content";
+
 const { pageTitle } = Astro.props;
+const allTopics = await getCollection("topics");
 ---
 
 <html lang="en">
@@ -11,6 +14,18 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
+    <div>
+      <h2>Sidebar</h2>
+      <ul>
+        {
+          allTopics.map((topic) => (
+            <li>
+              <a href={`/topics/${topic.id}`}>{topic.id}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
     <slot />
   </body>
 </html>
