@@ -17,7 +17,7 @@ function makeRangeIterator(start, end) {
         return { value: current++, done: false };
       }
       return { value: undefined, done: true };
-    },
+    }
   };
 }
 

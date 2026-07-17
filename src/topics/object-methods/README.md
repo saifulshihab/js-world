@@ -74,7 +74,7 @@ console.log(Object.getOwnPropertyDescriptor(obj, "visible"));
 Object.defineProperty(obj, "hidden", {
   value: "secret",
   enumerable: false, // won't show up in for...in, Object.keys, or JSON.stringify
-  writable: false, // can't be reassigned
+  writable: false // can't be reassigned
 });
 
 console.log(Object.keys(obj)); // ["visible"] — "hidden" is skipped
@@ -100,7 +100,7 @@ const rectangle = {
     const ratio = Math.sqrt(value / this.area);
     this.width *= ratio;
     this.height *= ratio;
-  },
+  }
 };
 
 console.log(rectangle.area); // 50 — read like a property, not rectangle.area()
@@ -114,7 +114,7 @@ console.log(rectangle.width, rectangle.height); // 20 10
 const animalMethods = {
   speak() {
     return `${this.name} makes a sound`;
-  },
+  }
 };
 
 const dog = Object.create(animalMethods); // dog's prototype is animalMethods

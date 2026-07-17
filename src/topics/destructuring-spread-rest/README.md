@@ -55,14 +55,14 @@ Destructuring unpacks values from arrays or properties from objects into distinc
 
   ```js
   const response = {
-    data: { id: 1, profile: { city: "London" } },
+    data: { id: 1, profile: { city: "London" } }
   };
 
   const {
     data: {
       id,
-      profile: { city },
-    },
+      profile: { city }
+    }
   } = response;
   console.log(id, city); // 1 "London"
   ```

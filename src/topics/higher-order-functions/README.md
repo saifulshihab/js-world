@@ -78,7 +78,7 @@ Since `map`/`filter` return new arrays, they can be chained fluently.
 const orders = [
   { item: "Book", price: 15, paid: true },
   { item: "Pen", price: 2, paid: false },
-  { item: "Laptop", price: 1200, paid: true },
+  { item: "Laptop", price: 1200, paid: true }
 ];
 
 const totalPaid = orders

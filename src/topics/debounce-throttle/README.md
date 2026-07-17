@@ -67,5 +67,5 @@ window.addEventListener("scroll", handleScroll);
 // runs:     | fn()  fn()  fn() |  (one every `interval`)
 ```
 
-- Use **debounce** when you want to react only to the *final* event in a burst (search input, form validation, auto-save).
-- Use **throttle** when you want to react *periodically* throughout continuous activity (scroll, drag, window resize, mouse move).
+- Use **debounce** when you want to react only to the _final_ event in a burst (search input, form validation, auto-save).
+- Use **throttle** when you want to react _periodically_ throughout continuous activity (scroll, drag, window resize, mouse move).

@@ -24,7 +24,7 @@ const counterModule = (function () {
     },
     getCount() {
       return count;
-    },
+    }
   };
 })();
 
@@ -76,7 +76,9 @@ class EventEmitter {
 const emitter = new EventEmitter();
 
 emitter.on("userLoggedIn", (user) => console.log(`Welcome, ${user.name}!`));
-emitter.on("userLoggedIn", (user) => console.log(`Logging login for ${user.name}`));
+emitter.on("userLoggedIn", (user) =>
+  console.log(`Logging login for ${user.name}`)
+);
 
 emitter.emit("userLoggedIn", { name: "Ada" });
 // "Welcome, Ada!"

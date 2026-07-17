@@ -23,7 +23,7 @@ title: "this Keyword"
     name: "Ada",
     greet() {
       console.log(`Hi, I'm ${this.name}`);
-    },
+    }
   };
 
   person.greet(); // "Hi, I'm Ada" — this === person
@@ -58,7 +58,7 @@ title: "this Keyword"
         this.count++; // `this` here is NOT counter (it's window/undefined)
         console.log(this.count); // NaN or error
       }, 100);
-    },
+    }
   };
 
   const counter2 = {
@@ -68,7 +68,7 @@ title: "this Keyword"
         this.count++; // arrow function inherits `this` from incrementLater
         console.log(this.count); // 1
       }, 100);
-    },
+    }
   };
   ```
 

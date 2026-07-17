@@ -36,7 +36,12 @@ export const topicCategories: { name: string; topics: string[] }[] = [
   },
   {
     name: "Asynchronous JavaScript",
-    topics: ["asynchronous-javascript", "promises", "fetch-api", "multi-threading"]
+    topics: [
+      "asynchronous-javascript",
+      "promises",
+      "fetch-api",
+      "multi-threading"
+    ]
   },
   {
     name: "Functional Programming",

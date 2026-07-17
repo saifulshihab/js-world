@@ -81,7 +81,7 @@ console.log("end");
 
 ## Starving the event loop
 
-Because the event loop can only act when the call stack is empty, a long-running synchronous task blocks *everything* — timers, clicks, renders — until it finishes.
+Because the event loop can only act when the call stack is empty, a long-running synchronous task blocks _everything_ — timers, clicks, renders — until it finishes.
 
 ```js
 setTimeout(() => console.log("this is delayed"), 0);

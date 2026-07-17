@@ -46,7 +46,7 @@ const data = {
   missing: undefined, // undefined properties are silently omitted
   created: new Date(), // Dates become ISO strings, not Date objects
   id: Symbol("id"), // symbol-keyed/valued properties are silently omitted
-  big: 10n, // BigInt throws instead of being silently dropped
+  big: 10n // BigInt throws instead of being silently dropped
 };
 
 console.log(JSON.stringify(data));
@@ -59,7 +59,7 @@ const data2 = {
   name: "Ada",
   greet: function () {},
   missing: undefined,
-  created: new Date("2026-01-01"),
+  created: new Date("2026-01-01")
 };
 console.log(JSON.stringify(data2));
 // '{"name":"Ada","created":"2026-01-01T00:00:00.000Z"}'
@@ -72,7 +72,9 @@ console.log(JSON.stringify(data2));
 // Replacer: filter or transform values while stringifying
 const user = { name: "Ada", password: "secret123", age: 36 };
 
-const safe = JSON.stringify(user, (key, value) => (key === "password" ? undefined : value));
+const safe = JSON.stringify(user, (key, value) =>
+  key === "password" ? undefined : value
+);
 console.log(safe); // '{"name":"Ada","age":36}' — password stripped out
 
 // Replacer as an array: whitelist which keys to keep

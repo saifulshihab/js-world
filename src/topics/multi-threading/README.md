@@ -60,7 +60,9 @@ An uncaught error inside the worker doesn't crash the main thread — it fires a
 const worker = new Worker("worker.js");
 
 worker.onerror = function (event) {
-  console.error(`Worker error: ${event.message} (${event.filename}:${event.lineno})`);
+  console.error(
+    `Worker error: ${event.message} (${event.filename}:${event.lineno})`
+  );
   event.preventDefault(); // stops it from also bubbling up as an unhandled error
 };
 ```

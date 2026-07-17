@@ -23,13 +23,13 @@ document.getElementById("outer").addEventListener(
   true // capture: true
 );
 
-document.getElementById("inner").addEventListener("click", () =>
-  console.log("inner - bubbling")
-);
+document
+  .getElementById("inner")
+  .addEventListener("click", () => console.log("inner - bubbling"));
 
-document.getElementById("outer").addEventListener("click", () =>
-  console.log("outer - bubbling")
-);
+document
+  .getElementById("outer")
+  .addEventListener("click", () => console.log("outer - bubbling"));
 
 // Clicking #inner logs:
 // "outer - capturing"  (capturing phase, top-down)
@@ -37,7 +37,7 @@ document.getElementById("outer").addEventListener("click", () =>
 // "outer - bubbling"   (bubbling phase, bottom-up)
 ```
 
-> **Event delegation** (see [event-delegation](../event-delegation)) is a *pattern* built on top of the bubbling phase — it isn't a propagation phase itself.
+> **Event delegation** (see [event-delegation](../event-delegation)) is a _pattern_ built on top of the bubbling phase — it isn't a propagation phase itself.
 
 ## Controlling Event Flow
 

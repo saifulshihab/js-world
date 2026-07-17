@@ -22,7 +22,7 @@ Person.prototype = {
   },
   sleep(name) {
     console.log(`${name} is sleeping`);
-  },
+  }
 };
 
 const person = Person("John", 38);
@@ -39,7 +39,7 @@ function Pet(name) {
 Pet.prototype = {
   call() {
     console.log("Pet is calling");
-  },
+  }
 };
 
 const cat = new Pet();

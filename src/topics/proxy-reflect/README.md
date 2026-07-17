@@ -20,7 +20,7 @@ const handler = {
     console.log(`Setting property: ${prop} = ${value}`);
     obj[prop] = value;
     return true; // must return true to indicate success
-  },
+  }
 };
 
 const proxiedUser = new Proxy(target, handler);
@@ -44,7 +44,7 @@ console.log(target.age); // 37 — the underlying target is actually modified
         }
         obj[prop] = value;
         return true;
-      },
+      }
     }
   );
 
@@ -60,7 +60,7 @@ console.log(target.age); // 37 — the underlying target is actually modified
     {
       get(obj, prop) {
         return prop in obj ? obj[prop] : "N/A"; // fallback for missing keys
-      },
+      }
     }
   );
 
@@ -76,7 +76,7 @@ console.log(target.age); // 37 — the underlying target is actually modified
     {
       set() {
         throw new Error("This object is read-only");
-      },
+      }
     }
   );
 
@@ -94,7 +94,7 @@ const logger = new Proxy(target, {
   get(obj, prop, receiver) {
     console.log(`Accessed: ${String(prop)}`);
     return Reflect.get(obj, prop, receiver); // equivalent to obj[prop], but respects edge cases (like getters/proxied prototypes)
-  },
+  }
 });
 
 console.log(logger.name); // "Accessed: name" then "Ada"
@@ -109,4 +109,4 @@ Reflect.deleteProperty(target, "name"); // same as `delete target.name`, but ret
 
 ## Why pair them together
 
-Proxy traps often need to perform the *default* version of an operation after their custom logic runs — `Reflect`'s methods are designed to be the exact counterpart of each trap, making that delegation reliable (especially with inheritance and `this` binding via the `receiver` argument), instead of hand-rolling `obj[prop] = value` and hoping it behaves identically in every case.
+Proxy traps often need to perform the _default_ version of an operation after their custom logic runs — `Reflect`'s methods are designed to be the exact counterpart of each trap, making that delegation reliable (especially with inheritance and `this` binding via the `receiver` argument), instead of hand-rolling `obj[prop] = value` and hoping it behaves identically in every case.

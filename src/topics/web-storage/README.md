@@ -67,7 +67,9 @@ document.cookie = "theme=; max-age=0; path=/";
 
 ```js
 window.addEventListener("storage", (event) => {
-  console.log(`"${event.key}" changed from "${event.oldValue}" to "${event.newValue}"`);
+  console.log(
+    `"${event.key}" changed from "${event.oldValue}" to "${event.newValue}"`
+  );
 });
 // Only fires in OTHER tabs on the same origin when localStorage changes here —
 // the tab that made the change does not receive its own event.
@@ -77,4 +79,4 @@ window.addEventListener("storage", (event) => {
 
 - **`localStorage`** — user preferences (theme, language), auth tokens for non-sensitive use cases, caching data between visits.
 - **`sessionStorage`** — per-tab temporary state (multi-step form drafts, wizard progress).
-- **Cookies** — anything the *server* needs to read on each request (session IDs, CSRF tokens), or when you need fine-grained expiration/security flags (`HttpOnly`, `Secure`, `SameSite`).
+- **Cookies** — anything the _server_ needs to read on each request (session IDs, CSRF tokens), or when you need fine-grained expiration/security flags (`HttpOnly`, `Secure`, `SameSite`).

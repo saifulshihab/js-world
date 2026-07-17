@@ -34,7 +34,9 @@ async function getUser(id) {
 
   if (!response.ok) {
     // response.ok is false for any status outside 200-299
-    throw new Error(`Request failed: ${response.status} ${response.statusText}`);
+    throw new Error(
+      `Request failed: ${response.status} ${response.statusText}`
+    );
   }
 
   return response.json();
@@ -62,9 +64,9 @@ await response.formData(); // multipart form data
 const response = await fetch("/api/users", {
   method: "POST",
   headers: {
-    "Content-Type": "application/json",
+    "Content-Type": "application/json"
   },
-  body: JSON.stringify({ name: "Ada", age: 36 }),
+  body: JSON.stringify({ name: "Ada", age: 36 })
 });
 
 const created = await response.json();
@@ -79,8 +81,8 @@ console.log(response.headers.get("content-type")); // "application/json; charset
 
 fetch("/api/protected", {
   headers: {
-    Authorization: "Bearer some-token",
-  },
+    Authorization: "Bearer some-token"
+  }
 });
 ```
 
@@ -106,6 +108,6 @@ setTimeout(() => controller.abort(), 3000); // cancel if it takes longer than 3s
 // See promises for a full breakdown of Promise.all/allSettled/race/any
 const [users, posts] = await Promise.all([
   fetch("/api/users").then((r) => r.json()),
-  fetch("/api/posts").then((r) => r.json()),
+  fetch("/api/posts").then((r) => r.json())
 ]);
 ```

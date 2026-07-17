@@ -52,12 +52,14 @@ const tree = {
   name: "CEO",
   reports: [
     { name: "VP Eng", reports: [{ name: "Engineer", reports: [] }] },
-    { name: "VP Sales", reports: [] },
-  ],
+    { name: "VP Sales", reports: [] }
+  ]
 };
 
 function countPeople(node) {
-  return 1 + node.reports.reduce((total, report) => total + countPeople(report), 0);
+  return (
+    1 + node.reports.reduce((total, report) => total + countPeople(report), 0)
+  );
 }
 
 console.log(countPeople(tree)); // 4

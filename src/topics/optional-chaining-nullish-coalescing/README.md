@@ -34,7 +34,7 @@ const city2 = user?.address?.city;
   const api = {
     fetchData() {
       return "data";
-    },
+    }
   };
 
   console.log(api.fetchData?.()); // "data"

@@ -89,7 +89,7 @@ console.log(
     weekday: "long",
     year: "numeric",
     month: "long",
-    day: "numeric",
+    day: "numeric"
   })
 ); // "Thursday, January 1, 2026"
 ```

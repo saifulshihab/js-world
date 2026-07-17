@@ -12,14 +12,20 @@ const byId = new Map(topics.map((topic) => [topic.id, topic]));
 const currentPath = Astro.url.pathname.replace(/\/+$/, "");
 ---
 
-<nav class="sidebar-scroll sticky top-0 h-screen w-72 shrink-0 overflow-y-auto border-r border-[#2d333b] bg-[#1c1f24]">
+<nav
+  class="sidebar-scroll sticky top-0 h-screen w-72 shrink-0 overflow-y-auto border-r border-[#2d333b] bg-[#1c1f24]"
+>
   <a href="/" class="block border-b border-[#2d333b] px-5 pt-6 pb-5">
-    <span class="flex items-center gap-1.5 font-mono text-[16px] font-semibold tracking-tight text-[#e1e4e8]">
+    <span
+      class="flex items-center gap-1.5 font-mono text-[16px] font-semibold tracking-tight text-[#e1e4e8]"
+    >
       <span class="text-[#F0DB4F]">{"{"}</span>
       <span>JS World</span>
       <span class="text-[#F0DB4F]">{"}"}</span>
     </span>
-    <span class="mt-1 block font-mono text-[11px] tracking-wide text-[#6a737d]">{"// javascript, explained properly"}</span>
+    <span class="mt-1 block font-mono text-[11px] tracking-wide text-[#6a737d]"
+      >{"// javascript, explained properly"}</span
+    >
   </a>
 
   <div class="space-y-7 px-5 py-6">

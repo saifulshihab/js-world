@@ -89,11 +89,13 @@ console.log(curriedSum(1, 2, 3)); // 6, calling with all args at once also works
 Composition combines several single-argument functions into one, where each function's output feeds into the next — a natural pairing with curried/partially-applied functions from above.
 
 ```js
-const compose = (...fns) =>
+const compose =
+  (...fns) =>
   (initialValue) =>
     fns.reduceRight((acc, fn) => fn(acc), initialValue); // right to left
 
-const pipe = (...fns) =>
+const pipe =
+  (...fns) =>
   (initialValue) =>
     fns.reduce((acc, fn) => fn(acc), initialValue); // left to right
 

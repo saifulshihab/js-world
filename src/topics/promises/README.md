@@ -75,9 +75,11 @@ async function loadUserPosts(id) {
   Runs promises in parallel; always resolves once **all** have settled, giving you the outcome of each — never short-circuits on failure.
 
   ```js
-  Promise.allSettled([Promise.resolve(1), Promise.reject("error"), Promise.resolve(3)]).then(
-    (results) => console.log(results)
-  );
+  Promise.allSettled([
+    Promise.resolve(1),
+    Promise.reject("error"),
+    Promise.resolve(3)
+  ]).then((results) => console.log(results));
   // [
   //   { status: "fulfilled", value: 1 },
   //   { status: "rejected", reason: "error" },
@@ -91,11 +93,15 @@ async function loadUserPosts(id) {
 
   ```js
   function withTimeout(promise, ms) {
-    const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error("Timed out")), ms));
+    const timeout = new Promise((_, reject) =>
+      setTimeout(() => reject(new Error("Timed out")), ms)
+    );
     return Promise.race([promise, timeout]);
   }
 
-  withTimeout(fetch("/slow-endpoint"), 3000).catch((err) => console.error(err.message));
+  withTimeout(fetch("/slow-endpoint"), 3000).catch((err) =>
+    console.error(err.message)
+  );
   ```
 
 - ### `Promise.any()`
@@ -103,7 +109,11 @@ async function loadUserPosts(id) {
   Resolves as soon as the **first** promise fulfills; only rejects if **all** of them reject (with an `AggregateError`).
 
   ```js
-  Promise.any([Promise.reject("fail 1"), Promise.resolve("fail 2, but this one wins"), Promise.reject("fail 3")]).then(
+  Promise.any([
+    Promise.reject("fail 1"),
+    Promise.resolve("fail 2, but this one wins"),
+    Promise.reject("fail 3")
+  ]).then(
     (result) => console.log(result) // "fail 2, but this one wins"
   );
   ```
