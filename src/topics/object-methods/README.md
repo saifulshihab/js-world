@@ -1,3 +1,7 @@
+---
+title: "Object Methods"
+---
+
 # Object Methods
 
 ## Reading keys, values, and entries

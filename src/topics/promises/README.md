@@ -1,3 +1,7 @@
+---
+title: "Promises"
+---
+
 # Promises
 
 A `Promise` is an object representing the eventual completion (or failure) of an asynchronous operation. It exists in one of three states: **pending** (initial), **fulfilled** (succeeded), or **rejected** (failed) — and once settled (fulfilled/rejected), its state never changes again.

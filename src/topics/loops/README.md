@@ -1,3 +1,7 @@
+---
+title: "Loops"
+---
+
 # Loops
 
 JavaScript has several ways to repeat code. Picking the right one makes intent obvious — a `for...of` loop over an array says "iterate values," a `for...in` loop says "iterate keys," and so on.

@@ -1,3 +1,7 @@
+---
+title: "Modules (ESM vs CommonJS)"
+---
+
 # Modules (ESM vs CommonJS)
 
 Modules let you split code into separate files with their own scope, and explicitly share (`export`) or consume (`import`/`require`) functionality between them, instead of relying on global variables.

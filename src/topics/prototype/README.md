@@ -1,3 +1,7 @@
+---
+title: "Prototype"
+---
+
 # Prototype
 
 Prototype is a property of any function in JavaScript that points to an object.

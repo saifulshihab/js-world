@@ -1,3 +1,7 @@
+---
+title: "Debounce & Throttle"
+---
+
 # Debounce & Throttle
 
 Both are techniques for controlling how often a function runs in response to events that can fire rapidly (scrolling, resizing, typing, mouse movement) — but they solve it differently.

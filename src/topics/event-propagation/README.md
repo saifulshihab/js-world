@@ -1,3 +1,7 @@
+---
+title: "Event Propagation"
+---
+
 # Event Propagation
 
 Event propagation dictates how events travel through the Document Object Model (DOM) tree when an interaction occurs

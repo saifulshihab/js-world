@@ -1,3 +1,7 @@
+---
+title: "The Event Loop"
+---
+
 # Event Loop
 
 JavaScript is single-threaded — it has one [call stack](../execution-context) and can only do one thing at a time. The **event loop** is the mechanism that lets JavaScript handle asynchronous operations (timers, network requests, DOM events) without blocking that single thread.

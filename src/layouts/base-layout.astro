@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import "../styles/global.css";
+import Sidebar from "../components/sidebar.astro";
 
 const { pageTitle } = Astro.props;
 const allTopics = await getCollection("topics");
@@ -8,24 +10,17 @@ const allTopics = await getCollection("topics");
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body>
-    <div>
-      <h2>Sidebar</h2>
-      <ul>
-        {
-          allTopics.map((topic) => (
-            <li>
-              <a href={`/topics/${topic.id}`}>{topic.id}</a>
-            </li>
-          ))
-        }
-      </ul>
+  <body class="bg-[#fbfbfa]">
+    <div class="flex min-h-screen">
+      <Sidebar topics={allTopics} />
+      <div class="min-w-0 flex-1">
+        <slot />
+      </div>
     </div>
-    <slot />
   </body>
 </html>

@@ -1,3 +1,7 @@
+---
+title: "Map, Set, WeakMap & WeakSet"
+---
+
 # Map, Set, WeakMap & WeakSet
 
 ## Map

@@ -1,3 +1,7 @@
+---
+title: "JSON"
+---
+
 # JSON
 
 JSON (JavaScript Object Notation) is a text-based data format used to exchange data between a client and server (or between systems in general). Despite the name, it's language-agnostic — most languages have JSON libraries.

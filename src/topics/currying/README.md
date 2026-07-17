@@ -1,3 +1,7 @@
+---
+title: "Currying"
+---
+
 # Currying
 
 Currying transforms a function that takes multiple arguments into a sequence of functions, each taking a single argument, where each call returns a new function until all arguments have been supplied.

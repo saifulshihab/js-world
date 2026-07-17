@@ -1,0 +1,78 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { topicCategories } from "../lib/topic-categories";
+
+interface Props {
+  topics: CollectionEntry<"topics">[];
+}
+
+const { topics } = Astro.props;
+
+const byId = new Map(topics.map((topic) => [topic.id, topic]));
+const currentPath = Astro.url.pathname.replace(/\/+$/, "");
+---
+
+<nav class="sidebar-scroll sticky top-0 h-screen w-72 shrink-0 overflow-y-auto border-r border-[#2d333b] bg-[#1c1f24]">
+  <a href="/" class="block border-b border-[#2d333b] px-5 pt-6 pb-5">
+    <span class="flex items-center gap-1.5 font-mono text-[16px] font-semibold tracking-tight text-[#e1e4e8]">
+      <span class="text-[#F0DB4F]">{"{"}</span>
+      <span>JS World</span>
+      <span class="text-[#F0DB4F]">{"}"}</span>
+    </span>
+    <span class="mt-1 block font-mono text-[11px] tracking-wide text-[#6a737d]">{"// javascript, explained properly"}</span>
+  </a>
+
+  <div class="space-y-7 px-5 py-6">
+    {
+      topicCategories.map((category) => (
+        <div>
+          <p class="mb-2.5 select-none font-mono text-[11px] font-medium tracking-wider text-[#6a737d]">
+            {"// "}
+            {category.name}
+          </p>
+          <ul class="space-y-1">
+            {category.topics.map((id) => {
+              const topic = byId.get(id);
+              if (!topic) return null;
+              const href = `/topics/${topic.id}`;
+              const isActive = currentPath === href;
+              return (
+                <li>
+                  <a
+                    href={href}
+                    aria-current={isActive ? "page" : undefined}
+                    class:list={[
+                      "block rounded-md border-l-2 py-1.5 pr-3 pl-3 text-[13px] leading-snug transition-colors duration-100",
+                      isActive
+                        ? "border-[#F0DB4F] bg-[#F0DB4F]/10 text-[#f3f5f7] font-medium"
+                        : "border-transparent text-[#a4acb4] hover:border-[#3a4046] hover:bg-white/5 hover:text-[#f3f5f7]"
+                    ]}
+                  >
+                    {topic.data.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</nav>
+
+<style>
+  .sidebar-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #3a4046 transparent;
+  }
+  .sidebar-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+  .sidebar-scroll::-webkit-scrollbar-thumb {
+    background-color: #3a4046;
+    border-radius: 9999px;
+  }
+  .sidebar-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+</style>

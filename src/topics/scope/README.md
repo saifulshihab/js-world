@@ -1,3 +1,7 @@
+---
+title: "Scope"
+---
+
 # Scope
 
 - ### Global scope

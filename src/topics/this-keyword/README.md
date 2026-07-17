@@ -1,3 +1,7 @@
+---
+title: "this Keyword"
+---
+
 # `this` Keyword
 
 `this` refers to the object that is currently executing the function. Unlike most languages, `this` in JavaScript is **not** determined by where a function is defined — it's determined by **how the function is called**.

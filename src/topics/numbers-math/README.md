@@ -1,3 +1,7 @@
+---
+title: "Numbers & Math"
+---
+
 # Numbers & Math
 
 ## Floating-point precision

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="4" fill="#F0DB4F" />
+  <text
+    x="16"
+    y="18"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif"
+    font-size="15"
+    font-weight="800"
+    fill="#000000"
+  >JS</text>
+</svg>

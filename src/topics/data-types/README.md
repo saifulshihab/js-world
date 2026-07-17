@@ -1,3 +1,7 @@
+---
+title: "Data Types"
+---
+
 # Data Types
 
 JavaScript has 8 data types: 7 **primitives** and 1 non-primitive (**Object**, which arrays, functions, and everything else compound is built on). Knowing which category a value belongs to explains a lot of JS's quirkier behavior.

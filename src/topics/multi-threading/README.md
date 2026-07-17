@@ -1,3 +1,7 @@
+---
+title: "Multi Threading"
+---
+
 # Multi Threading
 
 JavaScript itself is single-threaded — only one line of code runs at a time on the main thread. But long-running, CPU-heavy work (like a huge loop or heavy computation) run on the main thread will freeze the UI, since rendering, click handlers, and scrolling all share that same single thread. **Web Workers** solve this by giving you a genuinely separate background thread.

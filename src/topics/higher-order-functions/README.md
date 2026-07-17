@@ -1,3 +1,7 @@
+---
+title: "Higher-Order Functions"
+---
+
 # Higher-Order Functions
 
 A higher-order function is a function that either **takes one or more functions as arguments**, **returns a function**, or both. They're the foundation of functional-style JavaScript, and power the most common array methods.

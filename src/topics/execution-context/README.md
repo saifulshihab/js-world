@@ -1,3 +1,7 @@
+---
+title: "Execution Context"
+---
+
 # Execution Context
 
 A small and isolated environment where a specific piece of code is interpreted and converted into machine language.

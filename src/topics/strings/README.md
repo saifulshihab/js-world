@@ -1,3 +1,7 @@
+---
+title: "Strings"
+---
+
 # Strings
 
 ## Common string methods

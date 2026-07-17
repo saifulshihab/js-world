@@ -1,3 +1,7 @@
+---
+title: "Regular Expressions"
+---
+
 # Regular Expressions
 
 A regular expression (regex) describes a pattern for matching text — used for validation, searching, and replacing.

@@ -1,3 +1,7 @@
+---
+title: "Immutability & Pure Functions"
+---
+
 # Immutability & Pure Functions
 
 ## Pure functions

@@ -1,3 +1,7 @@
+---
+title: "Equality & Type Coercion"
+---
+
 # Equality & Type Coercion
 
 Type coercion is JavaScript's automatic conversion of a value from one type to another (e.g. string to number) when an operation expects a different type. It happens implicitly in comparisons, arithmetic, and template literals.

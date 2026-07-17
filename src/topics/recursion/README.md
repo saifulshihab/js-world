@@ -1,3 +1,7 @@
+---
+title: "Recursion"
+---
+
 # Recursion
 
 A recursive function is one that calls itself to break a problem down into smaller instances of the same problem. Every recursive function needs two things: a **base case** (when to stop) and a **recursive case** (how to shrink the problem and call itself again). Without a base case, it recurses forever and blows the [call stack](../execution-context).

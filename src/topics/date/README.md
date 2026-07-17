@@ -1,3 +1,7 @@
+---
+title: "Date"
+---
+
 # Date
 
 `Date` represents a single moment in time, internally stored as milliseconds since the Unix epoch (January 1, 1970 UTC).

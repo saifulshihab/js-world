@@ -1,3 +1,7 @@
+---
+title: "Proxy & Reflect"
+---
+
 # Proxy & Reflect
 
 ## Proxy

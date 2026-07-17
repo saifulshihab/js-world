@@ -1,3 +1,7 @@
+---
+title: Array Methods
+---
+
 # Array Methods
 
 Array methods split into two important camps: ones that **mutate** the original array in place, and ones that return a **new** array (or value) and leave the original untouched. Knowing which is which prevents accidental bugs from unexpected mutation.

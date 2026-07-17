@@ -1,3 +1,7 @@
+---
+title: "Design Patterns"
+---
+
 # Design Patterns
 
 Reusable, named solutions to common problems in code organization. Knowing them gives you a shared vocabulary for structure, not just working code.
