@@ -9,6 +9,10 @@
 
 [Let's go →](./src/topics/scope)
 
+or
+
+Read on the website: https://j-script-world.netlify.app
+
 ## Topics
 
 ### Language Fundamentals
