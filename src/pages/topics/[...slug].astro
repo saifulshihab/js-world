@@ -1,0 +1,22 @@
+---
+import { render } from "astro:content";
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/base-layout.astro";
+
+export async function getStaticPaths() {
+  const topics = await getCollection("topics");
+  return topics.map((topic) => ({
+    params: { slug: topic.id },
+    props: { topic }
+  }));
+}
+
+const { topic } = Astro.props;
+const { Content } = await render(topic);
+---
+
+<BaseLayout pageTitle={topic.data.title}>
+  <div class="prose max-w-3xl px-8 py-10">
+    <Content />
+  </div>
+</BaseLayout>

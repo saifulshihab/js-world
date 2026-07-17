@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/base-layout.astro";
+import { getCollection } from "astro:content";
+import { topicCategories } from "../lib/topic-categories";
+
+const allTopics = await getCollection("topics");
+const byId = new Map(allTopics.map((topic) => [topic.id, topic]));
+
+const topicCount = allTopics.length;
+const categoryCount = topicCategories.length;
+---
+
+<BaseLayout pageTitle="JS World | A JavaScript reference, topic by topic">
+  <section class="border-b border-[#e5e3dc] bg-[#1c1f24] px-8 py-16 sm:px-12">
+    <div class="max-w-2xl">
+      <p class="mb-4 font-mono text-[13px] tracking-wider text-[#6a737d]">
+        {"// javascript, explained properly"}
+      </p>
+      <h1
+        class="text-[2.5rem] leading-[1.1] font-semibold tracking-tight text-[#e1e4e8] sm:text-5xl"
+      >
+        Every corner of JavaScript, explained.
+      </h1>
+      <p class="mt-5 text-[15px] leading-relaxed text-[#9ba3ab]">
+        From closures and the event loop to WeakMaps and Web Workers — {
+          topicCount
+        } topics, each with runnable examples that are actually verified to produce
+        the output shown.
+      </p>
+      <div class="mt-8 flex items-center gap-5">
+        <a
+          href="/topics/scope"
+          class="rounded-md bg-[#F0DB4F] px-5 py-2.5 text-[14px] font-medium text-[#1c1f24] transition-opacity hover:opacity-90"
+        >
+          Start with Scope →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#fbfbfa] px-8 py-14 sm:px-12">
+    <div
+      class="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 xl:grid-cols-3"
+    >
+      {
+        topicCategories.map((category) => (
+          <div>
+            <p class="mb-3 font-mono text-[11px] tracking-wider text-[#9a9488]">
+              {"// "}
+              {category.name}
+            </p>
+            <ul class="space-y-1.5">
+              {category.topics.map((id) => {
+                const topic = byId.get(id);
+                if (!topic) return null;
+                return (
+                  <li>
+                    <a
+                      href={`/topics/${topic.id}`}
+                      class="text-[14px] text-[#3d3a34] hover:text-[#1c1f24] hover:underline"
+                    >
+                      {topic.data.title}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
