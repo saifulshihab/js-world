@@ -10,7 +10,7 @@ JavaScript is an interpreted language. To understand this better, let's look at 
 
 1. Interpreter: An interpreter runs instructions directly from the programming language without changing them into machine code first.
 
-   > `Easy debug, Slow Execution`
+   > Easy debug, Slow Execution
 
 2. Compiler: A compiler changes the entire program into object code (or binary code) and saves it. This code can then be run by the machine.
 
@@ -41,7 +41,7 @@ Every execution context (global or function) goes through two phases:
    - The `this` keyword is determined.
    - A **Lexical Environment** is created (memory space for variables and functions).
    - `var` variables are hoisted and initialized with `undefined`.
-   - `let`/`const` variables are hoisted but left uninitialized (Temporal Dead Zone).
+   - `let` / `const` variables are hoisted but left uninitialized (Temporal Dead Zone).
    - Function declarations are hoisted with their entire definition, so they can be called before their line of code runs.
 
 2. **Execution phase:**

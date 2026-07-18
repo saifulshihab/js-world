@@ -32,7 +32,7 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, "");
     {
       topicCategories.map((category) => (
         <div>
-          <p class="mb-2.5 select-none font-mono text-[11px] font-medium tracking-wider text-[#6a737d]">
+          <p class="mb-2.5 font-mono text-[11px] font-medium tracking-wider text-[#6a737d] select-none">
             {"// "}
             {category.name}
           </p>
@@ -50,7 +50,7 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, "");
                     class:list={[
                       "block rounded-md border-l-2 py-1.5 pr-3 pl-3 text-[13px] leading-snug transition-colors duration-100",
                       isActive
-                        ? "border-[#F0DB4F] bg-[#F0DB4F]/10 text-[#f3f5f7] font-medium"
+                        ? "border-[#F0DB4F] bg-[#F0DB4F]/10 font-medium text-[#f3f5f7]"
                         : "border-transparent text-[#a4acb4] hover:border-[#3a4046] hover:bg-white/5 hover:text-[#f3f5f7]"
                     ]}
                   >
