@@ -8,7 +8,7 @@ Reusable, named solutions to common problems in code organization. Knowing them 
 
 ## Module Pattern
 
-Uses a closure (see [closure](../closure)) to bundle private state with a public API — the original way to simulate "private" variables before ES modules and class private fields existed.
+Uses a closure (see [closure](/topics/closure)) to bundle private state with a public API — the original way to simulate "private" variables before ES modules and class private fields existed.
 
 ```js
 const counterModule = (function () {
@@ -109,7 +109,7 @@ console.log(createUser("viewer", "Grace"));
 
 ## Where these show up in real code
 
-- **Module pattern** → every ES module (see [modules](../modules)) is effectively this pattern, built into the language.
+- **Module pattern** → every ES module (see [modules](/topics/modules)) is effectively this pattern, built into the language.
 - **Singleton** → a shared Redux/Zustand store, a database connection pool, a logging service.
-- **Observer** → DOM events (see [event-propagation](../event-propagation)), Node's `EventEmitter`, RxJS Observables, React's state subscriptions.
+- **Observer** → DOM events (see [event-propagation](/topics/event-propagation)), Node's `EventEmitter`, RxJS Observables, React's state subscriptions.
 - **Factory** → `document.createElement`, ORM `.create()` methods, UI libraries that return different components based on a `type` prop.

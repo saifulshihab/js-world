@@ -87,7 +87,7 @@ shapes.forEach((shape) => console.log(shape.area().toFixed(2)));
 
 ## Private fields (`#`)
 
-Prefixing a field with `#` makes it truly private — inaccessible from outside the class, not just "hidden by convention" like the module pattern's closures (see [design-patterns](../design-patterns)).
+Prefixing a field with `#` makes it truly private — inaccessible from outside the class, not just "hidden by convention" like the module pattern's closures (see [design-patterns](/topics/design-patterns)).
 
 ```js
 class BankAccount {

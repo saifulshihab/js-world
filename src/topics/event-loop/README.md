@@ -4,7 +4,7 @@ title: "The Event Loop"
 
 # Event Loop
 
-JavaScript is single-threaded — it has one [call stack](../execution-context) and can only do one thing at a time. The **event loop** is the mechanism that lets JavaScript handle asynchronous operations (timers, network requests, DOM events) without blocking that single thread.
+JavaScript is single-threaded — it has one [call stack](/topics/execution-context) and can only do one thing at a time. The **event loop** is the mechanism that lets JavaScript handle asynchronous operations (timers, network requests, DOM events) without blocking that single thread.
 
 ## The pieces
 
@@ -98,4 +98,4 @@ console.log("done blocking");
 // "done blocking" logs first, then "this is delayed" — 3+ seconds late.
 ```
 
-This is exactly the problem [Web Workers](../multi-threading) solve — moving heavy synchronous work off the main thread entirely.
+This is exactly the problem [Web Workers](/topics/multi-threading) solve — moving heavy synchronous work off the main thread entirely.

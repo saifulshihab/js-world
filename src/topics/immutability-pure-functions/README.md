@@ -44,11 +44,11 @@ console.log(newCart); // ["apple", "banana"]
 
 - **Predictable**: no hidden dependencies to reason about — the function signature tells the whole story.
 - **Testable**: no setup/mocking of external state needed, just call it with inputs and assert the output.
-- **Safe to run anywhere**: no ordering dependencies, easy to memoize (see [memoization](../memoization)), parallelize, or cache.
+- **Safe to run anywhere**: no ordering dependencies, easy to memoize (see [memoization](/topics/memoization)), parallelize, or cache.
 
 ## Immutability
 
-Treating data as unchangeable — instead of modifying a value in place, you create a new value with the change applied. JavaScript doesn't enforce this by default (see the mutating-vs-non-mutating array methods in [array-methods](../array-methods)), so it's a discipline you opt into.
+Treating data as unchangeable — instead of modifying a value in place, you create a new value with the change applied. JavaScript doesn't enforce this by default (see the mutating-vs-non-mutating array methods in [array-methods](/topics/array-methods)), so it's a discipline you opt into.
 
 ```js
 // Mutating (avoid, especially for shared/passed-in data)

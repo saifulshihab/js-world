@@ -4,7 +4,7 @@ title: "Web Storage"
 
 # Web Storage
 
-Browser APIs for storing key-value data on the client, without needing a server round-trip. All stored values are strings — objects must be serialized (see [json](../json)) before storing.
+Browser APIs for storing key-value data on the client, without needing a server round-trip. All stored values are strings — objects must be serialized (see [json](/topics/json)) before storing.
 
 ## `localStorage`
 

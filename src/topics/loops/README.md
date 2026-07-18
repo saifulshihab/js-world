@@ -72,7 +72,7 @@ JavaScript has several ways to repeat code. Picking the right one makes intent o
 
 - ### `for...of`
 
-  Iterates over the **values** of any iterable — arrays, strings, Maps, Sets, generators (see [generators-iterators](../generators-iterators)). This is the go-to loop for arrays when you don't need the index.
+  Iterates over the **values** of any iterable — arrays, strings, Maps, Sets, generators (see [generators-iterators](/topics/generators-iterators)). This is the go-to loop for arrays when you don't need the index.
 
   ```js
   const scores = [10, 20, 30];
@@ -124,7 +124,7 @@ JavaScript has several ways to repeat code. Picking the right one makes intent o
 
 ## Loops vs array iteration methods
 
-`forEach`/`map`/`filter`/etc. (see [higher-order-functions](../higher-order-functions)) are usually preferred over manual loops for arrays because they're more declarative — but they aren't a drop-in replacement for every case.
+`forEach`/`map`/`filter`/etc. (see [higher-order-functions](/topics/higher-order-functions)) are usually preferred over manual loops for arrays because they're more declarative — but they aren't a drop-in replacement for every case.
 
 ```js
 // forEach cannot be stopped early — break/continue don't work inside it
@@ -164,4 +164,4 @@ async function processAllSequentially(items) {
 - Unknown number of iterations, condition-driven → `while` / `do...while`
 - Iterating a plain object's keys → `for...in`
 - Iterating an array's/iterable's values, with `break`/`continue`/`await` support → `for...of`
-- Transforming/filtering/reducing an array declaratively, no early exit needed → `map`/`filter`/`reduce` (see [higher-order-functions](../higher-order-functions))
+- Transforming/filtering/reducing an array declaratively, no early exit needed → `map`/`filter`/`reduce` (see [higher-order-functions](/topics/higher-order-functions))

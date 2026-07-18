@@ -24,6 +24,7 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#1c1f24" />
     <title>{pageTitle}</title>
 
     <meta name="description" content={description} />
@@ -44,11 +45,17 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
     <meta name="twitter:image" content={ogImageURL} />
   </head>
   <body class="bg-[#fbfbfa]">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-md focus:bg-[#F0DB4F] focus:px-4 focus:py-2 focus:text-[14px] focus:font-medium focus:text-[#1c1f24]"
+    >
+      Skip to content
+    </a>
     <div class="flex min-h-screen">
       <Sidebar topics={allTopics} />
-      <div class="min-w-0 flex-1">
+      <main id="main-content" class="min-w-0 flex-1">
         <slot />
-      </div>
+      </main>
     </div>
   </body>
 </html>

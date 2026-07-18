@@ -123,4 +123,4 @@ console.log(dog.speak()); // "Rex makes a sound"
 console.log(Object.getPrototypeOf(dog) === animalMethods); // true
 ```
 
-See [prototype](../prototype) for more on how the prototype chain works.
+See [prototype](/topics/prototype) for more on how the prototype chain works.

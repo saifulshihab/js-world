@@ -6,7 +6,7 @@ title: "Functions"
 
 ## Function declaration
 
-Hoisted entirely (see [hoisting](../hoisting)) — can be called before the line it's defined on.
+Hoisted entirely (see [hoisting](/topics/hoisting)) — can be called before the line it's defined on.
 
 ```js
 console.log(add(2, 3)); // 5, works even though called before the declaration below
@@ -41,7 +41,7 @@ console.log(typeof fact); // "undefined" — `fact` doesn't leak outside
 
 ## Arrow functions
 
-Shorter syntax, and — critically — no own `this`, `arguments`, or `super`; they inherit these lexically from the enclosing scope (see [this-keyword](../this-keyword)).
+Shorter syntax, and — critically — no own `this`, `arguments`, or `super`; they inherit these lexically from the enclosing scope (see [this-keyword](/topics/this-keyword)).
 
 ```js
 const multiply = (a, b) => a * b; // implicit return, no braces needed
@@ -82,7 +82,7 @@ console.log(greet(undefined, "Hey")); // "Hey, Guest!" — undefined triggers th
 
 ## Rest parameters
 
-Collects any number of arguments into a real array (see [destructuring-spread-rest](../destructuring-spread-rest)).
+Collects any number of arguments into a real array (see [destructuring-spread-rest](/topics/destructuring-spread-rest)).
 
 ```js
 function sum(...numbers) {

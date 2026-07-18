@@ -43,7 +43,7 @@ console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
 console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1)); // false — precision already lost
 ```
 
-> Prefer `Number.isNaN`/`Number.isInteger` over the global `isNaN`/`isFinite` — the global versions coerce their argument first, which can hide bugs (see [equality-type-coercion](../equality-type-coercion)).
+> Prefer `Number.isNaN`/`Number.isInteger` over the global `isNaN`/`isFinite` — the global versions coerce their argument first, which can hide bugs (see [equality-type-coercion](/topics/equality-type-coercion)).
 
 ## Number bases & formatting
 

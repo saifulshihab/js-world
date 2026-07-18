@@ -37,7 +37,7 @@ document
 // "outer - bubbling"   (bubbling phase, bottom-up)
 ```
 
-> **Event delegation** (see [event-delegation](../event-delegation)) is a _pattern_ built on top of the bubbling phase — it isn't a propagation phase itself.
+> **Event delegation** (see [event-delegation](/topics/event-delegation)) is a _pattern_ built on top of the bubbling phase — it isn't a propagation phase itself.
 
 ## Controlling Event Flow
 

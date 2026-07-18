@@ -4,7 +4,7 @@ title: "Fetch API"
 
 # Fetch API
 
-`fetch()` is the modern, Promise-based (see [promises](../promises)) API for making HTTP requests, replacing the older `XMLHttpRequest`.
+`fetch()` is the modern, Promise-based (see [promises](/topics/promises)) API for making HTTP requests, replacing the older `XMLHttpRequest`.
 
 ## Basic GET request
 

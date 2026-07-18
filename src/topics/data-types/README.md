@@ -115,4 +115,4 @@ console.log(original.address.city); // "Paris" — unaffected, fully independent
 
 ## Type coercion & equality
 
-See [equality-type-coercion](../equality-type-coercion) for how JS converts between these types in comparisons and operators.
+See [equality-type-coercion](/topics/equality-type-coercion) for how JS converts between these types in comparisons and operators.

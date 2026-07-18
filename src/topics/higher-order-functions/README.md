@@ -105,4 +105,4 @@ console.log(double(5)); // 10
 console.log(triple(5)); // 15
 ```
 
-See also [currying](../currying), which builds directly on this idea.
+See also [currying](/topics/currying), which builds directly on this idea.
