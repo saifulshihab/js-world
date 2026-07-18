@@ -13,6 +13,9 @@ or
 
 Read on the website: https://j-script-world.netlify.app
 
+> [!WARNING]
+> This is a personal learning reference, not official documentation. Some definitions, explanations, or examples may be incomplete, outdated, or outright incorrect. If you spot a mistake, please [open an issue](https://github.com/saifulshihab/js-world/issues/new) or send a [pull request](https://github.com/saifulshihab/js-world/pulls) — corrections are always welcome.
+
 ## Topics
 
 ### Language Fundamentals
