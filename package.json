@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/saifulshihab/js-world#readme",
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.0.9",
     "tailwindcss": "^4.3.3"

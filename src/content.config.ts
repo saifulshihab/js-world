@@ -9,7 +9,8 @@ const topics = defineCollection({
     generateId: ({ entry }) => entry.replace(/\/README\.md$/i, "")
   }),
   schema: z.object({
-    title: z.string()
+    title: z.string(),
+    description: z.string().optional()
   })
 });
 

@@ -4,7 +4,10 @@ import BaseLayout from "../layouts/base-layout.astro";
 const requestedPath = Astro.url.pathname;
 ---
 
-<BaseLayout pageTitle="404 — Page not found">
+<BaseLayout
+  pageTitle="404 — Page not found | JS World"
+  description="The page you're looking for doesn't exist. Browse JS World's full JavaScript topic index instead."
+>
   <div class="flex min-h-screen items-center justify-center bg-[#fbfbfa] px-8 py-16">
     <div class="max-w-lg text-center">
       <p class="mb-3 font-mono text-[13px] tracking-wider text-[#9a9488]">{"// 404"}</p>

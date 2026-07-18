@@ -13,9 +13,13 @@ export async function getStaticPaths() {
 
 const { topic } = Astro.props;
 const { Content } = await render(topic);
+
+const description =
+  topic.data.description ??
+  `${topic.data.title} in JavaScript — a practical, verified explanation with runnable examples, part of the JS World reference.`;
 ---
 
-<BaseLayout pageTitle={topic.data.title}>
+<BaseLayout pageTitle={`${topic.data.title} | JS World`} description={description}>
   <div class="prose max-w-3xl px-8 py-10">
     <Content />
   </div>

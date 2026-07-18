@@ -7,10 +7,12 @@ const allTopics = await getCollection("topics");
 const byId = new Map(allTopics.map((topic) => [topic.id, topic]));
 
 const topicCount = allTopics.length;
-const categoryCount = topicCategories.length;
 ---
 
-<BaseLayout pageTitle="JS World | A JavaScript reference, topic by topic">
+<BaseLayout
+  pageTitle="JS World | A JavaScript reference, topic by topic"
+  description={`From closures and the event loop to WeakMaps and Web Workers — ${topicCount} topics, each with runnable examples that are actually verified to produce the output shown.`}
+>
   <section class="border-b border-[#e5e3dc] bg-[#1c1f24] px-8 py-16 sm:px-12">
     <div class="max-w-2xl">
       <p class="mb-4 font-mono text-[13px] tracking-wider text-[#6a737d]">
