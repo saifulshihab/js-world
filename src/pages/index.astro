@@ -5,13 +5,11 @@ import { topicCategories } from "../lib/topic-categories";
 
 const allTopics = await getCollection("topics");
 const byId = new Map(allTopics.map((topic) => [topic.id, topic]));
-
-const topicCount = allTopics.length;
 ---
 
 <BaseLayout
   pageTitle="JS World | A JavaScript reference, topic by topic"
-  description={`From closures and the event loop to WeakMaps and Web Workers — ${topicCount} topics, each with runnable examples that are actually verified to produce the output shown.`}
+  description="From closures and the event loop to WeakMaps and Web Workers — each topic comes with runnable examples that are actually verified to produce the output shown."
 >
   <section class="border-b border-[#e5e3dc] bg-[#1c1f24] px-8 py-16 sm:px-12">
     <div class="max-w-2xl">
@@ -24,10 +22,8 @@ const topicCount = allTopics.length;
         Every corner of JavaScript, explained.
       </h1>
       <p class="mt-5 text-[15px] leading-relaxed text-[#9ba3ab]">
-        From closures and the event loop to WeakMaps and Web Workers — {
-          topicCount
-        } topics, each with runnable examples that are actually verified to produce
-        the output shown.
+        From closures and the event loop to WeakMaps and Web Workers — each topic comes with runnable examples that
+        are actually verified to produce the output shown.
       </p>
       <div class="mt-8 flex items-center gap-5">
         <a

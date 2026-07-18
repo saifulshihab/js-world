@@ -10,7 +10,7 @@ interface Props {
 
 const {
   pageTitle,
-  description = "A JavaScript reference covering 40 topics, from scope and closures to the event loop, generators, and Web Workers — with runnable, verified examples."
+  description = "A JavaScript reference covering scope and closures to the event loop, generators, and Web Workers — with runnable, verified examples."
 } = Astro.props;
 const allTopics = await getCollection("topics");
 
