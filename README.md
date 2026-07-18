@@ -7,6 +7,8 @@
                                          |_|
 ```
 
+A hands-on guide to modern JavaScript.
+
 [Let's go →](./src/topics/scope)
 
 or
