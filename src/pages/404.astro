@@ -8,7 +8,9 @@ const requestedPath = Astro.url.pathname;
   pageTitle="404 — Page not found | JS World"
   description="The page you're looking for doesn't exist. Browse JS World's full JavaScript topic index instead."
 >
-  <div class="flex min-h-screen items-center justify-center bg-[#fbfbfa] px-5 py-16 sm:px-8">
+  <div
+    class="flex min-h-screen items-center justify-center bg-[#fbfbfa] px-5 py-16 sm:px-8"
+  >
     <div class="max-w-lg text-center">
       <p class="mb-3 font-mono text-[13px] tracking-wider text-[#9a9488]">
         {"// 404"}
@@ -30,7 +32,9 @@ const requestedPath = Astro.url.pathname;
           <span class="text-[#6a737d]">is not defined</span>
         </p>
         <p class="text-[#6a737d]">
-          &nbsp;&nbsp;&nbsp;&nbsp;at JSWorld.render (<span class="text-[#B392F0]">{requestedPath}</span>)
+          &nbsp;&nbsp;&nbsp;&nbsp;at JSWorld.render (<span
+            class="text-[#B392F0]">{requestedPath}</span
+          >)
         </p>
       </div>
 
