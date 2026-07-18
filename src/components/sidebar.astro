@@ -13,7 +13,8 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, "");
 ---
 
 <nav
-  class="sidebar-scroll sticky top-0 h-screen w-72 shrink-0 overflow-y-auto border-r border-[#2d333b] bg-[#1c1f24]"
+  id="sidebar"
+  class="sidebar-scroll fixed inset-y-0 left-0 z-40 h-screen w-72 -translate-x-full overflow-y-auto border-r border-[#2d333b] bg-[#1c1f24] transition-transform duration-200 ease-in-out lg:sticky lg:top-0 lg:z-auto lg:w-72 lg:shrink-0 lg:translate-x-0"
 >
   <a href="/" class="block border-b border-[#2d333b] px-5 pt-6 pb-5">
     <span

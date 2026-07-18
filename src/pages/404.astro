@@ -8,9 +8,7 @@ const requestedPath = Astro.url.pathname;
   pageTitle="404 — Page not found | JS World"
   description="The page you're looking for doesn't exist. Browse JS World's full JavaScript topic index instead."
 >
-  <div
-    class="flex min-h-screen items-center justify-center bg-[#fbfbfa] px-8 py-16"
-  >
+  <div class="flex min-h-screen items-center justify-center bg-[#fbfbfa] px-5 py-16 sm:px-8">
     <div class="max-w-lg text-center">
       <p class="mb-3 font-mono text-[13px] tracking-wider text-[#9a9488]">
         {"// 404"}
@@ -23,7 +21,7 @@ const requestedPath = Astro.url.pathname;
       </p>
 
       <div
-        class="mt-8 rounded-lg bg-[#24292e] p-5 text-left font-mono text-[13px] leading-relaxed"
+        class="mt-8 overflow-x-auto rounded-lg bg-[#24292e] p-5 text-left font-mono text-[13px] leading-relaxed whitespace-nowrap"
       >
         <p>
           <span class="text-[#F97583]">Uncaught</span>
@@ -32,13 +30,11 @@ const requestedPath = Astro.url.pathname;
           <span class="text-[#6a737d]">is not defined</span>
         </p>
         <p class="text-[#6a737d]">
-          &nbsp;&nbsp;&nbsp;&nbsp;at JSWorld.render (<span
-            class="text-[#B392F0]">{requestedPath}</span
-          >)
+          &nbsp;&nbsp;&nbsp;&nbsp;at JSWorld.render (<span class="text-[#B392F0]">{requestedPath}</span>)
         </p>
       </div>
 
-      <div class="mt-8 flex items-center justify-center gap-5">
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
         <a
           href="/"
           class="rounded-md bg-[#F0DB4F] px-5 py-2.5 text-[14px] font-medium text-[#1c1f24] transition-opacity hover:opacity-90"

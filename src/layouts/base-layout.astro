@@ -51,11 +51,67 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
     >
       Skip to content
     </a>
+
+    <div
+      class="sticky top-0 z-20 flex items-center justify-between border-b border-[#2d333b] bg-[#1c1f24] px-4 py-3 lg:hidden"
+    >
+      <a href="/" class="flex items-center gap-1.5 font-mono text-[15px] font-semibold tracking-tight text-[#e1e4e8]">
+        <span class="text-[#F0DB4F]">{"{"}</span>
+        <span>JS World</span>
+        <span class="text-[#F0DB4F]">{"}"}</span>
+      </a>
+      <button
+        id="sidebar-toggle"
+        type="button"
+        aria-controls="sidebar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        class="rounded-md p-2 text-[#e1e4e8] hover:bg-white/5"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
     <div class="flex min-h-screen">
+      <div id="sidebar-backdrop" class="fixed inset-0 z-30 hidden bg-black/50 lg:hidden"></div>
       <Sidebar topics={allTopics} />
       <main id="main-content" class="min-w-0 flex-1">
         <slot />
       </main>
     </div>
+
+    <script>
+      const toggle = document.getElementById("sidebar-toggle");
+      const sidebar = document.getElementById("sidebar");
+      const backdrop = document.getElementById("sidebar-backdrop");
+
+      function closeSidebar() {
+        sidebar?.classList.add("-translate-x-full");
+        backdrop?.classList.add("hidden");
+        toggle?.setAttribute("aria-expanded", "false");
+      }
+
+      function openSidebar() {
+        sidebar?.classList.remove("-translate-x-full");
+        backdrop?.classList.remove("hidden");
+        toggle?.setAttribute("aria-expanded", "true");
+      }
+
+      toggle?.addEventListener("click", () => {
+        const isOpen = toggle.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
+      });
+
+      backdrop?.addEventListener("click", closeSidebar);
+      sidebar?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeSidebar));
+    </script>
   </body>
 </html>

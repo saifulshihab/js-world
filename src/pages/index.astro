@@ -11,14 +11,12 @@ const byId = new Map(allTopics.map((topic) => [topic.id, topic]));
   pageTitle="JS World | A JavaScript reference, topic by topic"
   description="From closures and the event loop to WeakMaps and Web Workers — each topic comes with runnable examples that are actually verified to produce the output shown."
 >
-  <section class="border-b border-[#e5e3dc] bg-[#1c1f24] px-8 py-16 sm:px-12">
+  <section class="border-b border-[#e5e3dc] bg-[#1c1f24] px-5 py-12 sm:px-12 sm:py-16">
     <div class="max-w-2xl">
       <p class="mb-4 font-mono text-[13px] tracking-wider text-[#6a737d]">
         {"// javascript, explained properly"}
       </p>
-      <h1
-        class="text-[2.5rem] leading-[1.1] font-semibold tracking-tight text-[#e1e4e8] sm:text-5xl"
-      >
+      <h1 class="text-4xl leading-[1.1] font-semibold tracking-tight text-[#e1e4e8] sm:text-5xl">
         Every corner of JavaScript, explained.
       </h1>
       <p class="mt-5 text-[15px] leading-relaxed text-[#9ba3ab]">
@@ -36,10 +34,8 @@ const byId = new Map(allTopics.map((topic) => [topic.id, topic]));
     </div>
   </section>
 
-  <section class="bg-[#fbfbfa] px-8 py-14 sm:px-12">
-    <div
-      class="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 xl:grid-cols-3"
-    >
+  <section class="bg-[#fbfbfa] px-5 py-12 sm:px-12 sm:py-14">
+    <div class="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 xl:grid-cols-3">
       {
         topicCategories.map((category) => (
           <div>
