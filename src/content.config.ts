@@ -5,7 +5,7 @@ import { z } from "astro/zod";
 const topics = defineCollection({
   loader: glob({
     pattern: "**/*.md",
-    base: "./src/topics",
+    base: "./src/content/topics",
     generateId: ({ entry }) => entry.replace(/\/README\.md$/i, "")
   }),
   schema: z.object({
