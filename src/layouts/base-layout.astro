@@ -104,35 +104,48 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
     </div>
 
     <script>
-      const toggle = document.getElementById("sidebar-toggle");
-      const sidebar = document.getElementById("sidebar");
-      const backdrop = document.getElementById("sidebar-backdrop");
+      function setupSidebar() {
+        const toggle = document.getElementById("sidebar-toggle");
+        const sidebar = document.getElementById("sidebar");
+        const backdrop = document.getElementById("sidebar-backdrop");
 
-      function closeSidebar() {
-        sidebar?.classList.add("-translate-x-full");
-        backdrop?.classList.add("hidden");
-        toggle?.setAttribute("aria-expanded", "false");
-      }
-
-      function openSidebar() {
-        sidebar?.classList.remove("-translate-x-full");
-        backdrop?.classList.remove("hidden");
-        toggle?.setAttribute("aria-expanded", "true");
-      }
-
-      toggle?.addEventListener("click", () => {
-        const isOpen = toggle.getAttribute("aria-expanded") === "true";
-        if (isOpen) {
-          closeSidebar();
-        } else {
-          openSidebar();
+        if (!toggle || !sidebar || !backdrop || toggle.dataset.ready) {
+          return;
         }
-      });
 
-      backdrop?.addEventListener("click", closeSidebar);
-      sidebar
-        ?.querySelectorAll("a")
-        .forEach((link) => link.addEventListener("click", closeSidebar));
+        toggle.dataset.ready = "true";
+
+        function closeSidebar() {
+          sidebar?.classList.add("-translate-x-full");
+          backdrop?.classList.add("hidden");
+          toggle?.setAttribute("aria-expanded", "false");
+        }
+
+        function openSidebar() {
+          sidebar?.classList.remove("-translate-x-full");
+          backdrop?.classList.remove("hidden");
+          toggle?.setAttribute("aria-expanded", "true");
+        }
+
+        toggle.addEventListener("click", () => {
+          const isOpen = toggle.getAttribute("aria-expanded") === "true";
+          if (isOpen) {
+            closeSidebar();
+          } else {
+            openSidebar();
+          }
+        });
+
+        backdrop.addEventListener("click", closeSidebar);
+        sidebar.addEventListener("click", (event) => {
+          if (event.target instanceof Element && event.target.closest("a")) {
+            closeSidebar();
+          }
+        });
+      }
+
+      setupSidebar();
+      document.addEventListener("astro:page-load", setupSidebar);
     </script>
   </body>
 </html>
